@@ -1,0 +1,20 @@
+package com.example.project;
+
+import com.example.project.fragments.SearchDonorFragment;
+
+import android.os.Bundle;
+
+public class SearchDonorActivity extends BaseActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_search_donor);
+		
+		intializeNavigationDrwaer(savedInstanceState);
+		
+		getFragmentManager().beginTransaction().add(R.id.fragment, new SearchDonorFragment()).commit();
+System.out.println("hbj");	}
+
+	
+}

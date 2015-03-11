@@ -1,0 +1,36 @@
+package com.example.project.fragments;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.TextureView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.example.project.R;
+
+public class DonorDetailsFragment extends BaseFragment{
+	
+	private TextView tv;
+	
+	@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+		Bundle savedInstanceState) {
+	return inflater.inflate(R.layout.donordetails, null);
+}
+
+	public void onActivityCreated(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onActivityCreated(savedInstanceState);
+	tv= (TextView) getView().findViewById(R.id.abcd);
+	Bundle bundle= getArguments();
+	tv.setText(bundle.getString("AGE"));
+	
+	
+		}
+
+}
+
+		 
+
+

@@ -1,0 +1,35 @@
+package com.example.project.fragments;
+
+import com.example.project.R;
+
+import android.app.Fragment;
+import android.app.ProgressDialog;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class BaseFragment extends Fragment{
+	protected ProgressDialog mDialog;
+	protected SharedPreferences mPreferances;
+	private final String PREFERANCE ="MyApp";
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		return super.onCreateView(inflater, container, savedInstanceState);
+	}
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onActivityCreated(savedInstanceState);
+		mPreferances = getActivity().getSharedPreferences(PREFERANCE, 0);
+		mDialog = new ProgressDialog(getActivity());
+		mDialog.setTitle(getResources().getString(R.string.app_name));
+		mDialog.setMessage(getResources().getString(R.string.message));
+	}
+
+}

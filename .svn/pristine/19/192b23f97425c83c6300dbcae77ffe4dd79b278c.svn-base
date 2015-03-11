@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TableLayout
+        android:id="@+id/tt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="firstname" />
+
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_marginRight="10dip"
+                android:inputType="text"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="middlename" />
+
+            <EditText
+                android:id="@+id/middlename"
+                android:layout_marginRight="10dip"
+                android:inputType="text"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="lastanme" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_marginRight="10dip"
+                android:inputType="text"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="age" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_marginRight="10dip"
+                android:inputType="number"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="gender" />
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:text="male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:text="female" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="bgroup" />
+
+            <Spinner
+                android:id="@+id/bgroup"
+                android:layout_marginRight="10dip"
+                android:entries="@array/blood_group"
+                android:textSize="20dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="Phno" />
+
+            <EditText
+                android:id="@+id/Phone"
+                android:layout_marginRight="10dip"
+                android:inputType="phone"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="Emailid" />
+
+            <EditText
+                android:id="@+id/emailid"
+                android:layout_marginRight="10dip"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="state" />
+
+            <EditText
+                android:id="@+id/state" android:inputType="text"
+                android:layout_marginRight="10dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="city" />
+
+            <EditText
+                android:id="@+id/city" android:inputType="text"
+                android:layout_marginRight="10dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginLeft="10dip"
+                android:text="zipcode" />
+
+            <EditText
+                android:id="@+id/zipcode"
+                android:layout_marginRight="10dip"
+                android:inputType="number"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow android:gravity="center" >
+
+            <Button
+                android:id="@+id/submit"
+                android:onClick="buttonSave"
+                android:text="submit" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
